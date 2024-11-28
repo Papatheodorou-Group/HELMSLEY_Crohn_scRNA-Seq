@@ -22,4 +22,9 @@ run DEA for the subclusters
 step8: RUN_reannotation.sh
 annotation curation based on GCA information, clustering, and cluster markers
 
+step9: RUN_subclustering.sh
+re-cluster selected clusters into subclusters
+
+step10: RUN_annotation_final.sh
+
 
