@@ -7,12 +7,12 @@ then
     exit
 fi
 
-dir2=$1
-dr=$2
+dir_doublets=$1 # dir where doublet labelling is stored
+dr=$2 
 outdir=$3
 if [[ $# -gt 4 ]]
 then
-    dir1=$4
+    dir_clusters=$4 # dir where clustering is stored
     mode=$5
     cl=$6
 fi
@@ -23,13 +23,13 @@ cells="${outdir}/cells.txt"
 # extract the cells
 if [[ $# -lt 6 ]]
 then
-    Rscript ${SCRIPT_DIR}/cell_subset_doublet.R ${dir2}/hvg_pca_clust/object.Rds ${dr} ${cells} 
+    Rscript ${SCRIPT_DIR}/cell_subset_doublet.R ${dir_doublets}/hvg_pca_clust/object.Rds ${dr} ${cells} 
 else
-    Rscript ${SCRIPT_DIR}/cell_subset_doublet.R ${dir2}/hvg_pca_clust/object.Rds ${dr} ${cells} ${dir1}/hvg_pca_clust/object.Rds ${mode} ${cl}
+    Rscript ${SCRIPT_DIR}/cell_subset_doublet.R ${dir_doublets}/hvg_pca_clust/object.Rds ${dr} ${cells} ${dir_clusters}/hvg_pca_clust/object.Rds ${mode} ${cl}
 fi
 
 # subset the object 
-Rscript ${SCRIPT_DIR}/obj_subset.R ${dir2}/hvg_pca_clust/object.Rds ${cells} ${outdir}/object.Rds
+Rscript ${SCRIPT_DIR}/obj_subset.R ${dir_doublets}/hvg_pca_clust/object.Rds ${cells} ${outdir}/object.Rds
 
 exit
 

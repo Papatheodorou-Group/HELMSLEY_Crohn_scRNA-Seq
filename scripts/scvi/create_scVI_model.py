@@ -18,7 +18,7 @@ print("")
 parser = OptionParser(usage=usage + arg1 + arg2 + arg3 + arg4)
 (options, args) = parser.parse_args()
 
-if len(args) < 3:
+if len(args) < 4:
 	sys.stderr.write("ERROR: <in_obj>, <out>, <out_obj> and <reduct_name> are required\nTry --help for help\n")
 	exit()
 	
@@ -26,7 +26,7 @@ IN_OBJ=args[0]
 OUT=args[1]
 OUT_OBJ=args[2]
 REDUCT_NAME=args[3]
-if len(args) > 3:
+if len(args) > 4:
 	BATCH_KEY=args[4]
 
 ###################
