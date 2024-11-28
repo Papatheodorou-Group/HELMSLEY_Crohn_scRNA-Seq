@@ -25,10 +25,10 @@ To reproduce the analysis, the following software packages are required:
 * CellRanger v7.1.0
 * R v4.0.3
 * python v3.9
-* R packages: ggplot2 v3.5.0.9000, dplyr 1.1.4, cowplot v1.1.3, circlize v0.4.13, SeuratObject v5.0.1, Seurat v4.0.5, Matrix v1.6-5       , DoubletFinder v2.0.3, ComplexHeatmap v2.9.4
+* R packages: ggplot2 v3.5.0.9000, dplyr 1.1.4, cowplot v1.1.3, circlize v0.4.13, SeuratObject v5.0.1, Seurat v4.0.5, Matrix v1.6-5, DoubletFinder v2.0.3, ComplexHeatmap v2.9.4, CellChat v2.1.2.
 * python packages: scanpy v1.9.3, scvi-tools v1.0.2, anndata v0.9.2.
 
-The code was executed on a GNU/Linux machine, using 4 cores and 64GB RAM for cell calling and 1 core and ~40GB RAM for downstream analysis.
+The code was executed on a GNU/Linux machine, using 4 cores and 64GB RAM for cell calling and 1 core and ~50GB RAM for downstream analysis.
 
 ## Installation
 
@@ -127,7 +127,7 @@ Generate a latent space with scANVI on the reference Gut Cell Atlas using the ce
 
 ```
 $ cd HELMSLEY_Crohn_scRNA-Seq/analysis/gene_expression/
-$ bash RUN_scvi_GCA.sh
+$ bash RUN_scvi_GCA_slurm.sh
 $ bash RUN_scanvi_HELMSLEY_slurm.sh
 ```
 
@@ -139,8 +139,18 @@ Re-cluster cells after filtering, generate automatic cluster annotation via pred
 $ cd HELMSLEY_Crohn_scRNA-Seq/analysis/gene_expression/
 $ bash RUN_reclustering_slurm.sh
 $ bash RUN_DEA_reclustering_slurm.sh
-$ bash RUN_reannotation_slurm.sh
+$ bash RUN_annotation_final_slurm.sh
 ```
+
+### 7. Cell-cell interaction prediction
+
+Predict cell-cell interactions from each condition separately, using CellChat, and compute the difference between them:
+
+```
+$ cd HELMSLEY_Crohn_scRNA-Seq/analysis/gene_expression/
+$ bash RUN_cell_cell_interactions_slurm.sh
+```
+
 
 
 
