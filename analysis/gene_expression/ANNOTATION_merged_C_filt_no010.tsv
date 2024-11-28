@@ -1,0 +1,79 @@
+0	NA	NA
+1	Epithelial inflamed	Epithelial inflamed
+2_0	CD8 T cell	T cells
+2_1	NK cells / T cells	T cells
+2_2	CD8 T cell	T cells
+2_3	NA	NA
+2_4	CD8 T cell	T cells
+3_0	Treg	T cells
+3_1	Tfh	T cells
+3_2	CD8 T cell	T cells
+3_3	NK cells / T cells	T cells
+3_4	NA	NA
+3_5	NA	NA
+3_6	NK cell	T cells
+3_7	NA	NA
+3_8	NA	NA
+4_0	NK cells / T cells	T cells
+4_1	Th	T cells
+4_2	CD8 T cell	T cells
+4_3	Th	T cells
+4_4	NK cells / T cells	T cells
+4_5	NK cell	T cells
+4_6	B cells	T cells
+4_7	NK cell	T cells
+4_8	MDSC	T cells
+5	Epithelial inflamed	Epithelial inflamed
+6	Plasma cells	Plasma cells
+7	Myeloid	Myeloid
+8	Plasma cells	Plasma cells
+9	Paneth	Epithelial
+10_0	B cells	B cells
+10_1	B cells	B cells
+10_2	B cells	B cells
+10_3	B cells	B cells
+10_4	B cells	B cells
+10_5	B cells	B cells
+10_6	B cells	B cells
+10_7	B cells	B cells
+11	Enterocyte	Epithelial
+12	Plasma cells	Plasma cells
+13	Endothelial	Endothelial
+14_0	Myeloid	Myeloid
+14_1	Mesenchymal	Myeloid
+14_2	Activated fibroblast	Myeloid
+14_3	cDC	Myeloid
+14_4	NK cells / T cells	Myeloid
+14_5	B cells	Myeloid
+14_6	Mesenchymal	Myeloid
+14_7	Activated fibroblast	Myeloid
+15	Goblet	Epithelial
+16	Macrophages	Macrophages
+17	Epithelial	Epithelial
+18	Epithelial mix	Epithelial
+19_0	Activated fibroblast	Mesenchymal
+19_1	Mesenchymal / Epithelial	Mesenchymal
+19_2	Mesenchymal / Epithelial	Mesenchymal
+19_3	Mesenchymal / Epithelial	Mesenchymal
+20_0	Pericyte	Mesenchymal
+20_1	Pericyte	Mesenchymal
+20_2	myofibroblast	Mesenchymal
+20_3	Mesenchymal	Mesenchymal
+20_4	myofibroblast	Mesenchymal
+20_5	Mesenchymal	Mesenchymal
+21_0	Mesenchymal	Mesenchymal
+21_1	Mesenchymal	Mesenchymal
+21_2	NPY+ stromal	Mesenchymal
+21_3	Mesenchymal	Mesenchymal
+21_4	Mesenchymal	Mesenchymal
+22	Plasma cells	Plasma cells
+23_0	NA	NA
+23_1	B cells	B cells
+23_2	B cells	B cells
+24	Goblet	Epithelial
+25	NA	NA
+26	Transitional stromal	Mesenchymal
+27	Mast cell	Myeloid
+28	NA	NA
+29	Mesenchymal	Mesenchymal
+30	cDC	Myeloid

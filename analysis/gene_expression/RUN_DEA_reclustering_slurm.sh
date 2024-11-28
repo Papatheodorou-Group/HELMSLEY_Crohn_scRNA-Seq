@@ -12,12 +12,11 @@ EXP_TYPE=( "merged_N_filt_TIL" \
            "merged_C_filt_no010" \
            "merged_N_filt_2ndRound_TIL" \
            "merged_C_filt_2ndRound_no010" )
-CL_MODE=( "clusters_pca_vst_top5000_k30_res1.2" \
-          "clusters_pca_vst_top5000_k30_res1.2" \
-          "clusters_pca_vst_top5000_k30_res1.2" \
-          "clusters_pca_vst_top5000_k30_res1.2" )
 
-MEM="40"
+CL_MODE="clusters_pca_vst_top5000_k30"
+RES=( $(cat "param_clust_filt.txt" | grep '^res=' | sed "s/res=//g" | tr ',' ' ') )
+
+MEM="50"
 
 OE="oe"
 [[ -d $OE ]] || mkdir ${OE}
@@ -36,7 +35,7 @@ batch_job () {
     # Run DEA 
     ID="DEA_${SET}"
     COMMAND="${SCRIPT_DIR}/${SCRIPT} \"${GIT_DIR}\" \"${OUT_OBJ}\" ${SLOT}" 
-    sbatch -t 10:00:00 --mem=${MEM}G \
+    sbatch -t 30:00:00 --mem=${MEM}G \
               -J ${ID} \
               -o ${OE}/${ID}.STDOUT \
               -e ${OE}/${ID}.STDERR \
@@ -45,9 +44,19 @@ batch_job () {
 }
 
 # run differential expression analysis
-for (( i=0; i < ${#CL_MODE[@]}; i++ ))
+# for (( i=0; i < ${#CL_MODE[@]}; i++ ))
+# do  
+#    batch_job ${EXP} ${EXP_TYPE[$i]} ${CL_MODE[$i]} ${DEA}
+# done
+
+# NEW: test all resolutions
+for exp in ${EXP_TYPE[@]}
 do  
-    batch_job ${EXP} ${EXP_TYPE[$i]} ${CL_MODE[$i]} ${DEA}
+    for res in ${RES[@]}
+    do 
+        SLOT="${CL_MODE}_res${res}"
+        batch_job ${EXP} ${exp} ${SLOT} ${DEA}
+    done
 done
 
 

@@ -130,7 +130,7 @@ batch_job_2 () {
            --dependency=afterok:${J3} \
            -o ${OE}/${ID4}.STDOUT \
            -e ${OE}/${ID4}.STDERR \
-           --wrap="${PREAMBLE} ; bash ${COMMAND}" 
+           --wrap="${PREAMBLE} ; bash ${COMMAND}"          
 }
 
 
@@ -285,7 +285,7 @@ J=$(sbatch -t 12:00:00 --mem=${MEM}G \
            -o ${OE}/${ID}.STDOUT \
            -e ${OE}/${ID}.STDERR \
            --wrap="${PREAMBLE} ; bash ${COMMAND}")
-J6=${J#Submitted batch job }
+J6=${J#Submitted batch job }     
 
 # cluster the merged samples
 ALL_SAMPLES=$( echo ${EXP[@]} | tr ' ' ',' )

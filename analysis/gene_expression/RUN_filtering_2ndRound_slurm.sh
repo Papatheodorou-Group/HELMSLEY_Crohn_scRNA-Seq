@@ -37,10 +37,10 @@ CL_MODE=( "clusters_pca_vst_top5000_k30_res0.6" \
           "" ) 
           
 # cluster ID -> to be removed, as they contain circa > 70% doublets       
-CL=( "13" "" "" "21" "" "22,23" "20" "" ) 
+CL_FILT=( "13" "" "" "21" "" "22,23" "20" "" ) 
 
 # dimensional reduction where doublets have been calculated
-DR="pca_vst_top5000" 
+DR_DOUBL="pca_vst_top5000" 
     
 MEM="20"
 MEM2="30"
@@ -59,8 +59,8 @@ batch_job () {
     SLOT=$4
     CL=$5
 
-    DIR1="${EXP_ID}/${SET}"
-    DIR2="${EXP_ID}/${SET}_filt"
+    DIR_CLUSTERS="${EXP_ID}/${SET}" # dir where clustering is stored
+    DIR_DOUBLETS="${EXP_ID}/${SET}_filt" # dir where doublet labelling is stored
     OUT="${EXP_ID}/${SET}_filt_2ndRound"
     
     [[ -d "${OUT}" ]] || mkdir -p "${OUT}"
@@ -68,7 +68,7 @@ batch_job () {
     # Run filtering by doublets and, optionally, by low-quality cluster
     # N.B.: the clustering have been computed on the original object, prior to doublet calculation, on the same dimensional reduction
     ID_FILT="filt_2ndRound_${EXP_ID}"
-    COMMAND="${SCRIPT_DIR}/${FILT} \"${DIR2}\" ${DR} \"${OUT}\" \"${DIR1}\" ${SLOT} ${CL}" 
+    COMMAND="${SCRIPT_DIR}/${FILT} \"${DIR_DOUBLETS}\" ${DR} \"${OUT}\" \"${DIR_CLUSTERS}\" ${SLOT} ${CL}" 
     sbatch -t 5:00:00 --mem=${MEM}G \
            -J ${ID_FILT} \
            -o ${OE}/${ID_FILT}.STDOUT \
@@ -85,12 +85,12 @@ do
     if [[ ${CL_MODE[$i]} == "" ]]
     then
         # unsupervised: only remove doublets predicted by doubletFinder
-        J=$( batch_job ${exp} ${exp}_ccRegress ${DR} )
+        J=$( batch_job ${exp} ${exp}_ccRegress ${DR_DOUBL} )
         val=${J#Submitted batch job }
         depend="${depend}:${val}"
     else 
         # semi-supervised: remove a cluster of putative doublets, then remove the number of top-scoring doublets needed to reach the 10x estimate
-        J=$( batch_job ${exp} ${exp}_ccRegress ${DR} ${CL_MODE[$i]} ${CL[$i]} )
+        J=$( batch_job ${exp} ${exp}_ccRegress ${DR_DOUBL} ${CL_MODE[$i]} ${CL_FILT[$i]} )
         val=${J#Submitted batch job }
         depend="${depend}:${val}"
     fi

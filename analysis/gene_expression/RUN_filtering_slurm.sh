@@ -36,8 +36,9 @@ CL_MODE=( "clusters_pca_vst_top5000_k30_res0.6" \
           "clusters_pca_vst_top5000_k30_res0.8" \
           "clusters_pca_vst_top5000_k30_res0.7" \
           "clusters_pca_vst_top5000_k30_res1.2" ) 
-          
-CL=( "11" "11" "4" "2,8" "14" "10" "4" "" ) 
+
+# clusters to remove
+CL_FILT=( "11" "11" "4" "2,8" "14" "10" "4" "" ) 
 
 # as per 10x v3 guidelines
 DOUBLET_PERC=( "7.6" "7.6" "7.6" "7.6" "7.6" "10" "7.6" "7.6" ) # assume ~10000 expected cells for each sample
@@ -56,13 +57,12 @@ OE="oe"
 # filter cells belonging to specified clusters
 
 depend=""
-# for (( i=0; i<${#EXP[@]}; i++ ))
-for (( i=4; i<${#EXP[@]}; i++ ))
+for (( i=0; i<${#EXP[@]}; i++ ))
 do  
     EXP_ID=${EXP[$i]}
     SET="${EXP[$i]}_ccRegress"
     SLOT=${CL_MODE[$i]}
-    CL=${CL[$i]}
+    CL=${CL_FILT[$i]}
     DP=${DOUBLET_PERC[$i]}
 
     DIR="${EXP_ID}/${SET}"
@@ -90,13 +90,12 @@ do
                --dependency=afterok:${J1} \
                -o ${OE}/${ID_DOUBL}.STDOUT \
                -e ${OE}/${ID_DOUBL}.STDERR \
-               --wrap="${PREAMBLE} ; bash ${COMMAND}")
+               --wrap="${PREAMBLE} ; bash ${COMMAND}")              
     J2=${J#Submitted batch job }  
 
     depend="${depend}:${J2}"
 done
 depend=${depend#:}
-exit
 
 # generate the merged objects and plot standard umap
 # N.B.: merged objects do not contain cluster nor doublet annotation of the individual samples

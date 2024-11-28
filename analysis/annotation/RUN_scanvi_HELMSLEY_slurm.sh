@@ -5,13 +5,12 @@ export R_LIBS_USER"
 
 SCRIPT_DIR="../../scripts/scvi"
 SEURAT_SCRIPT_DIR="../../scripts/seurat_analysis"
-DATA_DIR="../../data/GCA"
 
 SEURAT_DIR="../gene_expression/merged"
 MATRIX_DIR="../cell_calling"
 Q_DATA_DIR="../../data"
 
-MEM="20"
+MEM="30"
 CORES="2"
 
 ############### GCA ################
