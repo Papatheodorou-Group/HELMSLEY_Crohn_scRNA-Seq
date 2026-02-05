@@ -1,0 +1,57 @@
+0	Goblet	Epithelial
+1	Enterocyte	Epithelial
+2	Enterocyte	Epithelial
+3_0	Naive CD8 T cell	T cells
+3_1	CD8 T cell	T cells
+3_2	CD8 T cell	T cells
+3_3	CD4 T cell	T cells
+3_4	NA	NA
+4	Enterocyte	Epithelial
+5	Goblet	Epithelial
+6	Goblet	Epithelial
+7	Enterocyte	Epithelial
+8	NA	NA
+9	Transitional stromal C3+	Mesenchymal
+10	Monocytes	Myeloid
+11	Enterocyte	Epithelial
+12	Enterocyte	Epithelial
+13_0	NA	NA
+13_1	Tfh	T cells
+13_2	NA	NA
+13_3	CD8 T mem	T cells
+13_4	Tfh	T cells
+14_0	B cells	B cells
+14_1	NA	NA
+14_2	B cells	B cells
+15_0	B cells	B cells
+15_1	B cells	B cells
+15_2	B cells	B cells
+15_3	B cells	B cells
+16	Plasma cells	Plasma cells
+17	Enterocyte	Epithelial
+18	Goblet	Epithelial
+19	Enterocyte	Epithelial
+20_0	Myeloid	Myeloid
+20_1	Myeloid	Myeloid
+20_2	Myeloid	Myeloid
+20_3	cDC	Myeloid
+21	Tuft	Epithelial
+22_0	NK T cell	T cells
+22_1	NK T cell	T cells
+22_2	NK T cell	T cells
+22_3	NK cell	T cells
+23_0	B cells	B cells
+23_1	B cells	B cells
+23_2	NA	NA
+24	NA	NA
+25	Macrophages	Macrophages
+26_0	myofibroblast	Mesenchymal
+26_1	Pericyte	Mesenchymal
+26_2	NPY+ stromal	Mesenchymal
+26_3	ADAMDEC1+ stromal	Mesenchymal
+27	Mast cell	Myeloid
+28	Enteroendocrine cells	Epithelial
+29	NA	NA
+30	Endothelial	Endothelial
+31	BEST4+ epithelial	Epithelial
+32	NA	NA

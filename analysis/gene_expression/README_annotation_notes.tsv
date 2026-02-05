@@ -1,0 +1,108 @@
+# merged_N_filt_TIL									
+cluster_ID	high mito	high ribo	low ribo	mixed markers	doublet fraction	same/multi sample	to recluster	to merge with	putative annotation
+0	no	no	yes, partially	no	0.1	same	no		Epithelial – goblet
+1	yes, partially		yes	maybe (involved with digestion)	0.06	same	maybe		Epithelial – tuft?
+2	no	no	no	pancreatic cells? Involved in digestion	0	same	no		Epithelial –
+3	no	yes, partially	no	maybe	0	multi	yes		Tcells
+4	no	no	no	synthesis of cholesterol	0.02	same	no		Epithelial – goblet?
+5	no	no	yes	???	0.01	multi	no		Epithelial – 
+6	no	no	no	no	0.14	multi	no		Mesenchymal – C3+
+7	yes	no	yes	no	0	multi	no		TO REMOVE
+8	no	no	no	no	0.03	multi	yes (to potentially remove doublets)		Epithelial – goblet?
+9	no	no	no	OLFM4,REG1A	0.35	multi		19?	Epithelial inflamed?
+10	no	no	yes	s100 family, stress, hematopoietic	0	multi	no		Mesenchymal? Annotated as monocytes
+11	no	no	no	lipo activity	0.02	same	maybe		Epithelial –
+12	no	no	no	Tcell markers	0	multi	yes		Tcells
+13	no	no	no	no	0.02	same	yes	22?	B cells
+14	no	no	no	no	0.09	multi	no	15	Epithelial – 
+15	no	no	no	no	0	same	no	14	Epithelial –
+16	no	no	no	no	0.01	multi	no		Plasma cells
+17	no	no	no	s100 family	0.11	multi	yes		Mesenchymal
+18	no	no	no	no	0.13	multi	no		Epithelial –
+19	no	no	no	OLFM4,REG1A	0.04	multi	no	9?	Epithelial inflamed?
+20	no	no	no	epithelial, mesenchymal	0	multi	no		Epi / mesench?
+21	no	no	no	Yes: immune, mesench...	0.13	multi	maybe		???
+22	no	no	no	no	0.1	same	yes	13?	B cells
+23	no	no	no	no	0.01	multi	yes	27?	T cells
+24	no	yes, partially	no	no	0	multi	yes	13?	B cells
+25	no	no	no	no	0.57	multi	no		TO REMOVE
+26	no	no	no	no	0.22	multi	no		Macrophages
+27	no	no	no	no	0.01	multi	yes	23?	T cells
+28	no	no	no	no	0.04	same	no	13?	B cells
+29	no	no	no	no	0.2	multi	yes		Mesenchymal
+30	no	no	no	yes: endothelial, immune	0.45	multi	maybe remove doublets		Endothelial
+31	no	no	no	epi and oncogenes	0.36	multi	no		Epithelial – BEST4+ 
+32	no	no	no	muscle contraction, neurons, mucins	0.28	multi	no		Epithelial – Endocrine cells?
+33	no	no	no	no	0.01	multi 	no		MAST cells
+34	no	no	yes, partially		0	same	no		TO REMOVE
+									
+									
+# merged_C_filt_no010									
+cluster_ID	high mito	high ribo	low ribo	mixed markers	doublet fraction	same/multi sample	to recluster	to merge with	putative annotation
+0	no	no	no	yes: epithelial, immune…	0	same	no		TO REMOVE
+1	no	no	yes	yes: immune, fatty acid, platelet…	0	same			TO REMOVE
+2	no	no	no	no	0	same	yes	4	T cells
+3	no	no	no	yes, including cell-cycle	0	same	yes	2 and 3?	T cells?
+4	no	yes, partially	no	no	0	multi	yes	2	T cells
+5	no	no	yes	myeloid, plasma cell commun.	0	multi	no		Myeloid – monocytes?
+6	no	no	no	no	0	multi	yes	8,12,22	Plasma cells
+7	no	no	no	chemokine, cell motility	0.32	multi	yes		Myeloid?
+8	no	no	no	no	0	multi	yes	6,12,22	Plasma cells
+9	no	no	yes	sugar, lipid processing	0.09	same	yes	11,17	Epithelial –
+10	no	no	no	no	0	multi	yes	23?	B cells
+11	no	no	yes	lipid processing	0	same	yes	9,17	Epithelial –
+12	no	no	no	no	0		yes	6,8,22	Plasma cells
+13	no	no	no	no	0.13		no		Endothelial
+14	no	no	no	myeloid	0.16	multi	no		Myeloid – 
+15	no	no	no	carbohydrate, TFF3 (goblet)	0.45		no		Epithelial – goblet
+16	no	no	no	no	0.34	multi	no		Macrophages
+17	yes, partially	no	no	lipid processing	0.05		yes	9,11	Epithelial –
+18	no	no	no	OLFM4	0.67	multi	no		Epithelial –
+19	no	no	no	Metallothioneins	0.02	same	yes		Mesenchymal
+20	no	no	no	smooth muscle proteins	0.09	multi	yes		Mesenchymal
+21	no	no	no	no	0.38	multi	yes	29	Mesenchymal
+22	partially low	no	no	no	0	multi	yes	6,8,12	Plasma cells
+23	no	no	no	no	0	same	yes	10?	B cells
+24	no	no	no	no	0.32	multi	no		Epithelial – microfold cells?
+25	no	no	no	cycling cells	0.04	multi	no		TO REMOVE
+26	no	no	no	no	0.35	multi	no		Mesenchymal – transitional stromal
+27	no	no	no	no	0	multi	no		MAST cells
+28	no	no	no	yes	0.33	same	no		TO REMOVE
+29	no	no	no	no	0.42	multi	yes	21	Mesenchymal
+30	no	no	no	no	0.01	multi	no		Myeloid –  cDC 
+									
+# merged_N_filt_2ndRound_TIL									
+cluster_ID	unfiltered clusters	putative annotation	merge with?	recluster?					
+0	0,25,8	Epithelial – goblet							
+1	1,7	Epithelial – tuft?							
+2	2	Epithelial – ?							
+3	3	T cells	13	yes					
+4	4	Epithelial – 							
+5	8,0,25	Epithelial – goblet 							
+6	5	Epithelial – goblet? 							
+7	14	Epithelial – ?							
+8	7	TO REMOVE							
+9	6	Mesenchymal – Transitional stromal C3+							
+10	10	Myeloid – monocytes?							
+11	19	Epithelial – inflamed?							
+12	11	Epithelial – ?							
+13	12	T cells	3	yes					
+14	13	B cells	15,23	yes					
+15	28,22	B cells	14,23	yes					
+16	16	Plasma cells							
+17	15	Epithelial – ?							
+18	18	Epithelial – ?							
+19	20	Epithelial or mesenchymal?							
+20	17	Myeloid – monocytes or macrophages?		yes					
+21	21	Epithelial – tuft?							
+22	23	T cells	24	yes					
+23	24	B cells	14,15	yes					
+24	27	T cells?	22	yes					
+25	26	Myeloid – macrophages 							
+26	29	Mesenchymal – ?		yes					
+27	33	Myeloid – Mast cells							
+28	32	Epithelial – endocrine cells?							
+29	34	TO REMOVE							
+30	30	Endothelial							
+31	31	Epithelial – BEST4+ 							
+32	25,0,8	TO REMOVE							
