@@ -157,5 +157,5 @@ Run scCODA for cell type compositional modelling analysis:
 
 ```
 $ cd HELMSLEY_Crohn_scRNA-Seq/scripts/pertpy/
-$ bash pertpy_slurm.sh
+$ bash pertpy_slurm.sh HELMSLEY_Crohn_scRNA-Seq/scripts/pertpy/ path/to/files/
 ```
