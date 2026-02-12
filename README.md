@@ -156,7 +156,7 @@ $ bash RUN_cell_cell_interactions_slurm.sh
 
 ## Contributors
 
-Conceptualised and software development: [Francesca Nadalin](mailto:francesca.nadalin.phd@gmail.com). 
+Conceptualisation and software development: [Francesca Nadalin](mailto:francesca.nadalin.phd@gmail.com). 
 
 
 
