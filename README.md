@@ -1,12 +1,15 @@
 # HELMSLEY Crohn scRNA-Seq
 
-This repository contains the code to reproduce the analysis of normal and Crohn's disease scRNA-Seq samples.
+This repository contains the code to reproduce the analysis of the scRNA-Seq data reported in the article:
+
+Glinka, Wickham, Nadalin, *et al.* Crohn's lymphoid aggregates with endothelial clusters colocalise with submucosal fibrosis in fibrostenosing Crohn's disease. *The Journal of Pathology* (2026). [https://doi.org/10.1038/s41467-024-51424-4
+](http://doi.org/10.1002/path.70019)
 
 [Description](#description)  
 [System requirements](#system-requirements)  
 [Installation](#installation)  
 [Instructions for reproducing the analysis](#instructions-for-reproducing-the-analysis)  
-[Contact](#contact) 
+[Contributors](#contributors) 
 
 ## Description
 
@@ -150,6 +153,11 @@ Predict cell-cell interactions from each condition separately, using CellChat, a
 $ cd HELMSLEY_Crohn_scRNA-Seq/analysis/gene_expression/
 $ bash RUN_cell_cell_interactions_slurm.sh
 ```
+
+## Contributors
+
+Conceptualised and software development: [Francesca Nadalin](mailto:francesca.nadalin.phd@gmail.com). 
+
 
 
 
