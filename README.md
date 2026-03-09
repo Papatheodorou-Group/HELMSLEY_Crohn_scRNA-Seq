@@ -154,9 +154,19 @@ $ cd HELMSLEY_Crohn_scRNA-Seq/analysis/gene_expression/
 $ bash RUN_cell_cell_interactions_slurm.sh
 ```
 
+
+### 7. Compositional modelling
+
+Run scCODA for cell type compositional modelling analysis:
+
+```
+$ cd HELMSLEY_Crohn_scRNA-Seq/scripts/pertpy/
+$ bash pertpy_slurm.sh HELMSLEY_Crohn_scRNA-Seq/scripts/pertpy/ path/to/files/
+```
+
 ## Contributors
 
-Conceptualisation and software development: [Francesca Nadalin](mailto:francesca.nadalin.phd@gmail.com). 
+Conceptualisation and software development: [Francesca Nadalin](mailto:francesca.nadalin.phd@gmail.com),  [Gregory Wickham](mailto:greg.wickham@earlham.ac.uk), 
 
 
 
